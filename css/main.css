@@ -1,0 +1,94 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  background-color: #e74c3c;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: .85em;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: #c0392b;
+  margin: 100px 0;
+}
+
+article p {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 20px;
+}
+
+.background-overlay {
+  background-color: rgba(0, 0, 0, .3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-content {
+  padding: 40px 20px;
+  color: #444;
+  background-color: white;
+  width: 60%;
+}
+
+/* ---------------------------------------------------------
+    YOUR CODE HERE
+  ---------------------------------------------------------- */
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* add CSS to position the modal over the browser window */
+  position: fixed;
+
+  /* what is the default position of the modal? */
+  /* add CSS to move it */
+  transform: translateY(-100%);
+
+  /*add CSS to make the transition smooth*/
+  transition: all 0.5s ease-in-out;
+}
+
+/* create a class that represents the 'open' state of the modal */
+/* toggle this class using jQuery based on user interaction */
+
+.open {
+  overflow-y: hidden;
+}
+
+.open .modal {
+  transform: translateY(0%);
+  z-index: 1;
+}
+
+
